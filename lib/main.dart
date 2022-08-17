@@ -30,11 +30,16 @@ class _MyApp2State extends State<MyApp2> {
         body: Center(
           child: SizedBox(
             width: double.infinity,
-            child: Column(
+            height: double.infinity,
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.white,
+                    primary: Colors.orange,
+                  ),
                   onPressed: () {
                     //avisa o flutter q mudo algo
                     setState(() {
