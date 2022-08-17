@@ -28,6 +28,7 @@ class _MyApp2State extends State<MyApp2> {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
                 onPressed: () {
