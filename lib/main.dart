@@ -28,7 +28,8 @@ class _MyApp2State extends State<MyApp2> {
           title: const Text('FigurIt'),
         ),
         body: Center(
-          child: Container(
+          //se o index atual for 0 ele ativa o container
+          child: indexAtual == 0 ? Container(
             width: double.infinity,
             height: double.infinity,
             color: Color.fromARGB(255, 26, 136, 16),
@@ -60,7 +61,7 @@ class _MyApp2State extends State<MyApp2> {
                 ),
               ],
             ),
-          ),
+          ): const SizedBox(),
         ), // mandandi para o meio, botao direito -> refactor
 
         bottomNavigationBar: BottomNavigationBar(
