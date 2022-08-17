@@ -12,7 +12,7 @@ class MyApp2 extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(                                       // scaffold eh a parte principal do app a pag principal
         appBar: AppBar(
-          title: Text('FigurIt'),
+          title: Text('FigurItaas'),
         ),                                   // criei barra de cima 
       ),
     );
