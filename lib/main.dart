@@ -27,28 +27,32 @@ class _MyApp2State extends State<MyApp2> {
           title: const Text('FigurIt'),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  //avisa o flutter q mudo algo
-                  setState(() {
-                    buttonname = 'Clicked';
-                  });
-                },
-                child: Text(buttonname),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  //avisa o flutter q mudo algo
-                  setState(() {
-                    buttonname = 'Clicked';
-                  });
-                },
-                child: Text(buttonname),
-              ),
-            ],
+          child: SizedBox(
+            width: 400,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    //avisa o flutter q mudo algo
+                    setState(() {
+                      buttonname = 'Clicked';
+                    });
+                  },
+                  child: Text(buttonname),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    //avisa o flutter q mudo algo
+                    setState(() {
+                      buttonname = 'Clicked';
+                    });
+                  },
+                  child: Text(buttonname),
+                ),
+              ],
+            ),
           ),
         ), // mandandi para o meio, botao direito -> refactor
 
