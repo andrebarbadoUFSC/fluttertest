@@ -11,8 +11,9 @@ class MyApp2 extends StatefulWidget {
 }
 
 class _MyApp2State extends State<MyApp2> {
-  // criar uma variavel 
+  // criar uma variavel
   String buttonname = 'Click';
+  int indexAtual = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -26,26 +27,47 @@ class _MyApp2State extends State<MyApp2> {
           title: const Text('FigurIt'),
         ),
         body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              //avisa o flutter q mudo algo 
-              setState(() {
-                buttonname = 'Clicked';
-              });
-              
-            },
-            child: Text(buttonname),
+          child: Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  //avisa o flutter q mudo algo
+                  setState(() {
+                    buttonname = 'Clicked';
+                  });
+                },
+                child: Text(buttonname),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  //avisa o flutter q mudo algo
+                  setState(() {
+                    buttonname = 'Clicked';
+                  });
+                },
+                child: Text(buttonname),
+              ),
+            ],
           ),
         ), // mandandi para o meio, botao direito -> refactor
 
         bottomNavigationBar: BottomNavigationBar(
           items: const [
-            BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
             BottomNavigationBarItem(
               label: 'Settings',
               icon: Icon(Icons.settings),
             )
           ],
+          currentIndex: indexAtual,
+          onTap: (int index){
+            setState(() {
+              indexAtual = index;
+            });
+          },
         ),
       ),
     );
