@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp2());
+  runApp(MyApp2());
 }
 
-class MyApp2 extends StatelessWidget {
-  const MyApp2({Key? key}) : super(key: key);
+class MyApp2 extends StatefulWidget {
+  MyApp2({Key? key}) : super(key: key);
+  @override
+  State<MyApp2> createState() => _MyApp2State();
+}
+
+class _MyApp2State extends State<MyApp2> {
+  // criar uma variavel 
+  String buttonname = 'Click';
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +28,13 @@ class MyApp2 extends StatelessWidget {
         body: Center(
           child: ElevatedButton(
             onPressed: () {
-              print('escreva algo');
+              //avisa o flutter q mudo algo 
+              setState(() {
+                buttonname = 'Clicked';
+              });
+              
             },
-            child: Text('Click'),
+            child: Text(buttonname),
           ),
         ), // mandandi para o meio, botao direito -> refactor
 
