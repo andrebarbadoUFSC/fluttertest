@@ -61,7 +61,9 @@ class _MyApp2State extends State<MyApp2> {
                 ),
               ],
             ),
-          ): const SizedBox(),
+          )
+        : Image.network(
+          'https://s2.glbimg.com/XyUa9fSiGGOOz269tQqVJhs7rL4=/0x0:550x638/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_f035dd6fd91c438fa04ab718d608bbaa/internal_photos/bs/2022/F/O/pQRBBKStecsmgbgEh0dA/capa-album-copa.jpg'),
         ), // mandandi para o meio, botao direito -> refactor
 
         bottomNavigationBar: BottomNavigationBar(
