@@ -28,9 +28,10 @@ class _MyApp2State extends State<MyApp2> {
           title: const Text('FigurIt'),
         ),
         body: Center(
-          child: SizedBox(
+          child: Container(
             width: double.infinity,
             height: double.infinity,
+            color: Color.fromARGB(255, 26, 136, 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
