@@ -15,6 +15,7 @@ class _MyApp2State extends State<MyApp2> {
   String buttonname = 'Click';
   int indexAtual = 0;
 
+
   @override
   Widget build(BuildContext context) {
     //tira o debug banner
@@ -28,10 +29,10 @@ class _MyApp2State extends State<MyApp2> {
         ),
         body: Center(
           child: SizedBox(
-            width: 400,
+            width: double.infinity,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ElevatedButton(
                   onPressed: () {
