@@ -19,7 +19,12 @@ class MyApp2 extends StatelessWidget {
           title: const Text('FigurIt'),
         ),
         body: Center(
-          child: ElevatedButton(onPressed: (){}, child: Text('Click')),
+          child: ElevatedButton(
+            onPressed: () {
+              print('escreva algo');
+            },
+            child: Text('Click'),
+          ),
         ), // mandandi para o meio, botao direito -> refactor
 
         bottomNavigationBar: BottomNavigationBar(
