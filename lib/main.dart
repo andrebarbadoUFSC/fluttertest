@@ -11,17 +11,31 @@ class MyApp2 extends StatefulWidget {
 }
 
 class _MyApp2State extends State<MyApp2> {
-  // criar uma variavel
-  String buttonname = 'Click';
-  int indexAtual = 0;
-
-
   @override
   Widget build(BuildContext context) {
     //tira o debug banner
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: Myapp2Ext()
+    );
+  }
+}
+
+
+class Myapp2Ext extends StatefulWidget {
+  Myapp2Ext({super.key});
+  @override
+  State<Myapp2Ext> createState() => _Myapp2ExtState();
+}
+
+class _Myapp2ExtState extends State<Myapp2Ext> {
+  
+  String buttonname = 'Click';
+  int indexAtual = 0;
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         // scaffold eh a parte principal do app a pag principal
         appBar: AppBar(
           // criei barra de cima
@@ -52,12 +66,14 @@ class _MyApp2State extends State<MyApp2> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    //avisa o flutter q mudo algo
-                    setState(() {
-                      buttonname = 'Clicked';
-                    });
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => 
+                        const NextPage(),
+                      ),
+                    );
                   },
-                  child: Text(buttonname),
+                  child: const Text('Next page'),
                 ),
               ],
             ),
@@ -85,7 +101,17 @@ class _MyApp2State extends State<MyApp2> {
             });
           },
         ),
-      ),
+      );
+  }
+}
+
+class NextPage extends StatelessWidget {
+  const NextPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
     );
   }
 }
