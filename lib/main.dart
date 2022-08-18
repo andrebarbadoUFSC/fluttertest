@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'next_page.dart';
 
 void main() {
   runApp(MyApp2());
@@ -32,7 +33,7 @@ class _Myapp2ExtState extends State<Myapp2Ext> {
   
   String buttonname = 'Click';
   int indexAtual = 0;
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
